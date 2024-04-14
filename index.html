@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5">Bookmarker</h1>
+
+      <div class="dot mt-5">
+        <h2 class="text-center mt-3">Bookmark your favorite sites</h2>
+
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Site Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Bookmark Name"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="Site" class="form-label">Site URL</label>
+            <input
+              type="text"
+              class="form-control"
+              id="url"
+              placeholder="Website URL"
+            />
+          </div>
+
+          <div class="text-center">
+            <button
+              onclick="Add()"
+              type="button"
+              class="btn btn-danger mb-4 px-5" disabled
+              id="btn"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <input
+      onkeyup="search(this.value)"
+        type="text"
+        class="my-3 form-control"
+        placeholder="search by bookmark name..."
+      />
+
+      <table class="table mt-3 text-center">
+        <thead class="">
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>UpDate</th>
+          <th>Delete</th>
+        </thead>
+
+        <tbody id="tableBody">
+          <!-- <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

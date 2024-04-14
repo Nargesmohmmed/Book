@@ -1,0 +1,55 @@
+
+body {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    background-color: #FEC260;
+    transition: height 1s;
+    bottom: 10%;
+    z-index: -1;
+}
+
+h1:hover::before{
+    height: 40px;
+}
+
+
+.container .dot {
+    border-top: 2px dotted;
+    border-bottom: 2px dotted;
+}
+
+.container .dot h2 {
+    color: #3DA55B;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+}
+
+.container .dot h2::before {
+    content: "\f02e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    position: absolute;
+    left: 35%;
+}
+
+.container .dot h2::after {
+    content: "\f02e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    position: absolute;
+    right: 35%;
+}
